@@ -1,0 +1,206 @@
+/*Estila body*/
+body{
+    background-color: black;
+}
+
+/*Estilo de la navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border: 1px solid black;
+    border-radius: 0.5vw;
+    margin-bottom: 1vw;
+    background-color: rgb(100, 0, 163);
+}
+.navbar-logo {
+    max-width: 120px;
+    height: auto;
+    padding: 10px;
+}
+.logo-image {
+    max-width: 50%;
+    height: auto;
+    transition: transform 0.3s;
+}
+.logo-image:hover {
+    transform: scale(1.2); /* Al pasar el cursor sobre el logo, agrándalo al 120% */
+}
+.navbar-links {
+    display: flex;
+}
+.navbar-link-container {
+    position: relative;
+}
+.navbar-link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1vw;
+    margin-right: 2vw;
+    border-radius: 1vw;
+    transition: background-color 0.3s;
+    background-color: rgb(0, 0, 0);
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+}
+.navbar-link:hover {
+    background-color: rgb(6, 189, 235);
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 80%;     
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+}
+.dropdown a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+    border: 1px solid white; /* Añade un contorno blanco */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+    border-radius: 1vw;
+}
+.dropdown a:hover {
+    background-color: rgb(6, 189, 235);
+}
+.navbar-link-container:hover .dropdown {
+    display: block;
+}
+/*Estilo de las cards*/
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    gap: 1vw;
+}
+.card {
+    width: 200px;
+    background-color: aliceblue;
+    padding: 1vw;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.card p {
+    margin-bottom: 10px;
+    font-size: small;
+}
+.btn:hover{
+    background-color: rgb(6, 189, 235);
+}
+.btn {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: background-color 0.3s;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+}
+/*Estilo carousel*/
+.carousel-wrapper {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.carousel-container {
+    position: relative; 
+    width: 100%;
+    max-width: 1000px; 
+    overflow: hidden; 
+    border-radius: 10px; 
+}
+.carousel {
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+}
+.carousel-item {
+    min-width: 100%; 
+    box-sizing: border-box; 
+}
+.carousel-item img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+.prev, .next {
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent; 
+    border: none; 
+    color: white; 
+    font-size: 2rem; 
+    padding: 10px; 
+    cursor: pointer;
+    border-radius: 50%; 
+}
+.prev {
+    left: 10px; /* Posiciona el botón a la izquierda */
+}
+.next {
+    right: 10px; /* Posiciona el botón a la derecha */
+}
+/* Estilo para el footer */
+.footer {
+    background-color: rgb(100, 0, 163); 
+    color: white; 
+    position:relative; /* Mantener el footer al final */
+    border-radius: 0.5vw
+    
+}
+.footer-container {
+    display: flex; /* Usar flexbox para disposición en columnas */
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    margin: 0 auto; /* Centrar contenido horizontalmente */
+    padding: 0 1rem; /* Relleno lateral */
+    margin-bottom: 1vw;
+}
+
+.footer-column {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    margin: 0 1rem; /* Espaciado horizontal entre columnas */
+}
+
+.footer-column h3 {
+    border-bottom: 2px solid #555; /* Línea inferior para el encabezado */
+    padding-bottom: 0.5rem; /* Espaciado inferior del encabezado */
+    margin-bottom: 0.5rem; /* Espaciado inferior para separación */
+}
+
+.footer-column p, .footer-column ul {
+    margin: 0; /* Eliminar margen superior e inferior */
+    padding: 0; /* Eliminar relleno */
+}
+.footer-column ul {
+    list-style: none; /* Eliminar viñetas de la lista */
+}
+.footer-column ul li {
+    margin-bottom: 0.5rem; /* Espaciado inferior de cada elemento de lista */
+}
+
+.footer-column ul li a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.footer-bottom {
+    text-align: center; /* Centrar texto */
+    padding-top: 0.5vw; /* Espaciado superior */
+    border-top: 1px solid #555; /* Línea superior para separación */
+}
